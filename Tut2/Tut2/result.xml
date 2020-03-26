@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<university xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <student>
+    <FirstName>Pawel</FirstName>
+    <LastName>Nowak</LastName>
+    <IndexNumber>459;12/02/2000;</IndexNumber>
+    <BirthDate>0:00:00:000</BirthDate>
+    <E-Mail>nowak@pjwstk.edu.pl</E-Mail>
+    <MotherName>Alina</MotherName>
+    <FatherName>Adam</FatherName>
+    <Studies>
+      <course>Computer Science</course>
+      <StudiesMode>Full-Time</StudiesMode>
+    </Studies>
+  </student>
+</university>
