@@ -11,7 +11,7 @@ namespace TutorialSolution2
         static void Main(string[] args)
         {
             List<Student> list = new List<Student>();
-            string line = null;
+            string line;
 
             Console.WriteLine("Enter a path to CSV file:");
             String FilePathToCSV = Console.ReadLine();
