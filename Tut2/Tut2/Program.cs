@@ -11,8 +11,8 @@ namespace TutorialSolution2
         static void Main(string[] args)
         {
             List<Student> list = new List<Student>();
-            string line;
-
+            
+            Console.WriteLine("testestestest");
             Console.WriteLine("Enter a path to CSV file:");
             String FilePathToCSV = Console.ReadLine();
 
@@ -45,6 +45,7 @@ namespace TutorialSolution2
                     using (FileStream fs = File.Create(DestinationPath))
                     using (var stream = new StreamReader(File.OpenRead(FilePathToCSV)))
                     {
+                        string line;
                         while ((line = stream.ReadLine()) != null)
                         {
                             string[] students = line.Split(',');
