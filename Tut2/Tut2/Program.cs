@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Xml.Serialization;
+using TutorialSolution2;
 
-namespace TutorialSolution2
+namespace Tut2
 {
     class Program
     {
@@ -14,16 +15,16 @@ namespace TutorialSolution2
             
             Console.WriteLine("testestestest");
             Console.WriteLine("Enter a path to CSV file:");
-            String FilePathToCSV = Console.ReadLine();
+            String filePathToCsv = Console.ReadLine();
 
             Console.WriteLine("Enter a destination path:");
-            String DestinationPath = Console.ReadLine() + "result";
-            Console.WriteLine(DestinationPath);
+            String destinationPath = Console.ReadLine() + "result";
+            Console.WriteLine(destinationPath);
 
             Console.WriteLine("Enter data format:");
-            String DataFormat = Console.ReadLine();
-            DestinationPath = DestinationPath + "." + DataFormat;
-            Console.WriteLine(DestinationPath);
+            String dataFormat = Console.ReadLine();
+            destinationPath = destinationPath + "." + dataFormat;
+            Console.WriteLine(destinationPath);
 
             String LogFilePath = "E://PJA//APBD//TutorialSolution2//TutorialSolution2//log.txt";
             Console.WriteLine(LogFilePath);
@@ -31,19 +32,19 @@ namespace TutorialSolution2
             {
                 try
                 {
-                    if (!File.Exists(FilePathToCSV))
+                    if (!File.Exists(filePathToCsv))
                     {
                         AddText(logging, "Path to File CSV not found.");
                         throw new FileNotFoundException("CSV file does not exist.");
                     }
 
-                    if (File.Exists(DestinationPath))
+                    if (File.Exists(destinationPath))
                     {
-                        File.Delete(DestinationPath);
+                        File.Delete(destinationPath);
                     }
 
-                    using (FileStream fs = File.Create(DestinationPath))
-                    using (var stream = new StreamReader(File.OpenRead(FilePathToCSV)))
+                    using (FileStream fs = File.Create(destinationPath))
+                    using (var stream = new StreamReader(File.OpenRead(filePathToCsv)))
                     {
                         string line;
                         while ((line = stream.ReadLine()) != null)
